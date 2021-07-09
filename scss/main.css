@@ -936,6 +936,11 @@ body {
   display: flex;
   margin: 0 0 0 32px;
 }
+@media (max-width: 600px) {
+  .swiper-pagination-bullets {
+    margin: 0;
+  }
+}
 
 .swiper-pagination-bullet {
   cursor: pointer;
@@ -1103,6 +1108,15 @@ body {
 .item-product__label_new {
   background: #2EC1AC;
 }
+.item-product__image {
+  height: 100%;
+  width: 100%;
+}
+.item-product__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .item-product__body {
   flex: 1 1 auto;
   padding: 16px 16px 30px 16px;
@@ -1133,6 +1147,7 @@ body {
   font-size: 20px;
   font-weight: 600;
   line-height: 150%;
+  padding: 0 0 0 16px;
 }
 .item-product__price_old {
   font-size: 16px;
@@ -1181,6 +1196,7 @@ body {
   color: inherit;
   font-weight: 600;
   transition: color 0.3s ease;
+  margin: 0 16px;
 }
 .actions-product__link::before {
   margin: 0 10px 0 0;
@@ -1306,7 +1322,7 @@ body {
 }
 @media (max-width: 991.98px) {
   .slider-rooms__slide.swiper-slide-active .slider-rooms__image {
-    width: 45%;
+    width: 50%;
     margin: 0 auto;
   }
 }
@@ -1348,7 +1364,7 @@ body {
     padding: 32px;
   }
 }
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .slider-rooms__content {
     margin: 20px 0 0 0;
   }
@@ -1427,16 +1443,18 @@ body {
   bottom: 30px;
   width: 100%;
   left: 396px;
+  z-index: 99;
 }
 @media (max-width: 991.98px) {
   .slider-rooms__dots {
     bottom: -30px;
     left: 50%;
+    transform: translateX(-9%);
   }
 }
 @media (max-width: 600px) {
   .slider-rooms__dots {
-    left: 38%;
+    transform: translateX(-10%);
   }
 }
 
@@ -1518,6 +1536,25 @@ body {
     align-items: center;
   }
 }
+.slider-tips__image {
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 1210px) {
+  .slider-tips__image {
+    width: 60%;
+  }
+}
+@media (max-width: 767.98px) {
+  .slider-tips__image {
+    width: 80%;
+  }
+}
+.slider-tips__image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 .slider-tips__content {
   display: flex;
   flex-direction: column;
@@ -1597,7 +1634,11 @@ body {
 @media (max-width: 661px) {
   .slider-arrow {
     justify-content: space-between;
-    margin: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .slider-arrow {
+    margin: 0 -30px;
   }
 }
 @media (max-width: 600px) {
